@@ -147,6 +147,9 @@ header{
     animation: slideTop 1s ease forwards;
     animation-delay: .2s;
 }
+.btn:hover{
+    box-shadow: none;
+}
 
 @keyframes slide-right{
     from {
