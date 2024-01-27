@@ -41,6 +41,11 @@ header{
     align-items: center;
     z-index: 100;
 }
+
+header.sticky{
+    border-bottom: .1rem solid rgba(0,0,0, .2);
+     background: var(--second-bg-color);
+} 
 .logo{
     font-size: 25px;
     color: #fff;
@@ -49,11 +54,15 @@ header{
     cursor: pointer;
     margin-left: 0px;
     animation: slide-right 1s ease forwards;
-    position: relative;
+    /* position: relative; */
+    transition: .5s ease;
 }
 .logo:hover{
     color: #0ef;
     transform: translateX(2 deg);
+}
+#menu-icon{
+    display: none;
 }
 .navbar a {
     font-size: 18px;
@@ -470,7 +479,53 @@ margin-bottom: 3rem;
 
 }
 
+@media (max-width:1200px) {
+    html{
+        font-size: 55%;
+    }
+    
+}
+@media (max-width:991px) {
+    .header{
+        padding: 2rem 3%;
+        
+    }
 
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media (max-width:768px) {
+    #menu-icon{
+        display: block;
+        z-index: 1000;
+    }
+    /* #menu-icon:before{
+        content: none;
+    } */
+
+    .navbar{
+        position: absolute;
+        top: 60px; 
+        left: 0;        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color); 
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: flex;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+}
 
 
 

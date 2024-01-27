@@ -26,4 +26,23 @@ window.onscroll = () => {
       });
     }
   });
+
+  // for the sticky header
+  let header = document.querySelector("header");
+
+  header.classList.toggle("sticky", window.scrollY > 100);
+
+  // remove toggle and navbar when click nave link scroll y
+  menuIcon.classList.remove("bx-x");
+  navbar.classList.remove("active");
 };
+
+//toggle icon bar
+let menuIcon = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
+
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle("bx-x");
+  navbar.classList.toggle("active");
+};
+//
